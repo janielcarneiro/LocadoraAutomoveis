@@ -1,4 +1,16 @@
-*{
+:root 
+{
+  --background: #AFD3E2;
+  --texto-icones: #152536;
+  --links: #19A7CE;
+  --vermelho: #FF6884;
+  --fundo-tabela: #E0F0F6;  
+}
+
+
+
+*
+{
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,7 +18,7 @@
 
 #leftHalf 
 {
-    background: rgb(175, 211, 226);
+    background: var(--background);
     width: 50%;
     position: absolute;
     left: 0px;
