@@ -10,9 +10,11 @@ app.engine('handlebars', exphbs.engine({defaultLayout: 'principal'}));
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(express.json());
+app.use(express.static('resources'));
 
 
 app.use(users)

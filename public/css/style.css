@@ -1,5 +1,38 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: aquamarine;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#leftHalf 
+{
+    background: rgb(175, 211, 226);
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;  
+}
+
+#rightHalf 
+{
+    width: 50%;
+    font-weight:bold;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#logo
+{
+  
+} 
