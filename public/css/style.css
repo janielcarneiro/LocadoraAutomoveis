@@ -41,14 +41,6 @@
     justify-content: center;
 }
 
-#logo
-{
-  position: fixed;
-  top: 1%;
-  left: 1%;
-  max-width: 300px;
-} 
-
 #entrar
 {
   color: var(--texto-icones);
@@ -57,3 +49,38 @@
   bottom: 10vh;
   left: 2%;
 }
+
+.navbarPartials
+{
+  background-color: var(--background);
+  position: absolute;
+  left: 0px;
+  width: 25vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  padding-left: 1%;
+
+}
+
+.page
+{
+  color: #152536;
+  width: 75vw;
+  height: 100vh;
+  position: absolute;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#logo
+{
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  max-width: 300px;
+} 
