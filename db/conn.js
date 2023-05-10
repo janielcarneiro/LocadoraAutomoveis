@@ -1,6 +1,6 @@
-/**const {Sequelize} = require('sequelize')
+const {Sequelize} = require('sequelize')
 
-const sequelize = new Sequelize('CRUD', 'root', '12345', {
+const sequelize = new Sequelize('Locadora', 'root', '12345', {
         host: 'localhost',
         dialect: 'mysql'
 });
@@ -12,4 +12,4 @@ try{
     console.log("error na conexão: ", error);
 }
 
-module.exports = sequelize;*/
+module.exports = sequelize;

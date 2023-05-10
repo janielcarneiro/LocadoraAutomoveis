@@ -61,7 +61,7 @@
 
 .page
 {
-  color: #152536;
+  color: var(--texto-icones);
   width: 75vw;
   height: 100vh;
   position: absolute;
@@ -83,7 +83,7 @@
 
 svg
 {
-  fill: #152536;
+  fill: var(--texto-icones);
 }
 
 
@@ -96,5 +96,4 @@ svg
 #navbar
 {
   background-color: #AFD3E2;
-
 }
