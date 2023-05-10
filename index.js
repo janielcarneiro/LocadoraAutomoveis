@@ -1,7 +1,10 @@
 const express = require("express");
 const exphbs = require('express-handlebars');
-const users = require('./routes/users')
+const user = require('./routes/users')
 const conn = require("./db/conn");
+const veiculos = require('./routes/veiculos')
+const Users = require('./model/User')
+const Veiculos = require('./model/Veiculos')
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -16,10 +19,19 @@ app.use(express.static('public'));
 app.use(express.json());
 
 
-app.use(users)
+app.use(user)
+
+app.use('/veiculos', veiculos);
 
 // sincroniza o modelo com o banco de dados e inicia o servidor
 
-    app.listen(PORT, () => {
-        console.log(`Servidor ligado na porta ${PORT}`);
-    });
+    conn.sync()
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`Servidor ligado na porta ${PORT}`);
+        });
+      console.log('Server Started')
+    })
+    .catch((err) => {
+      console.log(err)
+    })
