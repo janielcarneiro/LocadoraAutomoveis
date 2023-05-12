@@ -38,6 +38,9 @@ app.get("/veiculos", (req, res, next) => {
     res.render("dashboard/vehicle/vehicle");
 })
 
+app.get("/alocacoes", (req, res, next) => {
+    res.render("dashboard/allocation/allocation");
+})
 
 app.use(users)
 

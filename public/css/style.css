@@ -59,13 +59,23 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
 #nav-head
 {
-  position: absolute;
-  top: 20px;
+  /* position: absolute; */
+  /* top: 2vh; */
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: flex-start;
+  
+}
+
+#nav-body
+{
+  align-content: center;
+  align-items: center;
 }
 
 #nav-footer
@@ -110,7 +120,6 @@ svg
 
 #navbar
 {
-  /* background-color: #AFD3E2; */
   background-color: var(--background);
 }
 
