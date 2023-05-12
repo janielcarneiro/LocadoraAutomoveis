@@ -1,0 +1,46 @@
+<div class="formUser">
+  <div class="title2">
+    <h1>Cadastrar Cliente</h1>
+    <a href="/clients" class="btn">
+      <i class="bi bi-house"></i> Home
+    </a>
+  </div>
+  
+  <form action="/clients/add" method="post" class="row">
+
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <label for="nome" class="form-label">Nome:</label>
+          <input type="text" name="name" placeholder="Nome" class="form-control"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="cpf" class="form-label">CPF:</label>
+          <input type="number" name="ssn" placeholder="CPF" class="form-control"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="telefone" class="form-label">Telefone:</label>
+          <input type="number" name="phone" placeholder="Telefone" class="form-control"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="endereco" class="form-label">Endereço:</label>
+          <input type="text" name="address" placeholder="Endereço" class="form-control"/>
+        </div>
+      </div>
+      <div class="col botoes">
+        <a href="/clients" class="btn">
+          Voltar
+        </a>
+        <input type="submit" value="Cadastrar" class="btn" />
+      </div>
+    </div>
+
+  </form>
+  
+</div>
