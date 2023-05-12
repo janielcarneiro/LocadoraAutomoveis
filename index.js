@@ -23,15 +23,19 @@ app.use(express.json());
 app.use(express.static('resources'));
 
 app.get("/entrar", (req, res, next) => {
-    res.render("login")
+    res.render("login");
 })
 
 app.get("/dashboard", (req, res, next) => {
-    res.render("dashboard/dashboard")
+    res.render("dashboard/dashboard");
 })
 
 app.get("/clientes", (req, res, next) => {
-    res.render("dashboard/client/client")
+    res.render("dashboard/client/client");
+})
+
+app.get("/veiculos", (req, res, next) => {
+    res.render("dashboard/vehicle/vehicle");
 })
 
 
