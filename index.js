@@ -14,6 +14,7 @@ app.engine('handlebars', exphbs.engine({defaultLayout: 'principal'}));
 
 app.set('view engine', 'handlebars');
 app.set('views', './views');
+app.set('dashboard', './views/dashboard');
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -24,6 +25,15 @@ app.use(express.static('resources'));
 app.get("/entrar", (req, res, next) => {
     res.render("login")
 })
+
+app.get("/dashboard", (req, res, next) => {
+    res.render("dashboard/dashboard")
+})
+
+app.get("/clientes", (req, res, next) => {
+    res.render("dashboard/client/client")
+})
+
 
 app.use(users)
 
