@@ -21,6 +21,9 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.static('resources'));
 
+app.get("/entrar", (req, res, next) => {
+    res.render("login")
+})
 
 app.use(users)
 
