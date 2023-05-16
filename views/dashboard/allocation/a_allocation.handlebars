@@ -1,0 +1,104 @@
+{{> navbar}}
+{{> icons}}
+
+<div class="page">
+<div class="container">
+        <div class="mt-1">
+          <h1>Alocações</h2>
+          <hr>
+        </div>
+
+    <div class="card">
+              <div id="card" class="card-header">
+                  <svg class="m-1" width="20" height="20"><use xlink:href="#road"/></svg>
+                  Nova alocação
+              </div>
+    
+              <div id="card-body" class="card-body">
+
+                <form  action="">
+                    
+                    
+                    <div class="container d-flex align-content-center m-2">
+                        <label for="cars">
+                            <svg class="be m-1" width="20" height="20"><use xlink:href="#car-side"/></svg>
+                        </label>
+                        
+                        <select id="cars" name="cars" class="form-control">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="fiat">Fiat</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+
+                    <div class="container d-flex m-2">
+                        <label for="placa">
+                            <svg class="m-1" width="20" height="20"><use xlink:href="#car-plate"/></svg>
+                        </label>
+    
+                        <input type="text" id="placa" class="form-control" placeholder="Placa">
+                    </div>
+
+
+                    <div class="container d-flex m-2">
+                        <label for="cor">
+                            <svg class="m-1" width="20" height="20"><use xlink:href="#color"/></svg>
+                        </label>
+    
+                        <input type="text" id="cor" class="form-control" placeholder="Cor">
+                    </div>
+
+                    <div class="container d-flex align-content-center m-2">
+                        <label for="cliente">
+                            <svg class="be m-1" width="20" height="20"><use xlink:href="#client"/></svg>
+                        </label>
+                        
+                        <select id="cliente" name="cars" class="form-control">
+                            <option value="volvo">Pedro</option>
+                            <option value="saab">José</option>
+                            <option value="fiat">Paulo</option>
+                            <option value="audi">Amora</option>
+                        </select>
+                    </div>
+
+                    <div class="container d-flex m-2">
+                        <label for="cor">
+                            <svg class="m-1" width="20" height="20"><use xlink:href="#cpf-icon"/></svg>
+                        </label>
+    
+                        <input type="text" id="cor" class="form-control" placeholder="CPF do cliente">
+                    </div>
+
+                    <div class="container d-flex m-2">
+                        <label for="cor">
+                            <svg class="m-1" width="20" height="20"><use xlink:href="#date-add"/></svg>
+                        </label>
+    
+                        <input type="date" id="cor" class="form-control" placeholder="Data inicial">
+                    </div>
+
+                    <div class="container d-flex m-2">
+                        <label for="cor">
+                            <svg class="m-1" width="20" height="20"><use xlink:href="#date-done"/></svg>
+                        </label>
+    
+                        <input type="date" id="cor" class="form-control" placeholder="Data devolução">
+                    </div>
+
+                    
+                </form>
+                
+              </div>
+            
+    </div>
+
+    <div class="d-flex mx-1">
+        <button type="button" class="btn btn-outline-info btn-block mt-3 mx-1" > Cancelar</button>
+        <button type="button" class="btn btn-info btn-block mt-3 mx-1" > Cadastrar nova alocação</button>
+    </div>
+
+</div>
+
+    
+</div>

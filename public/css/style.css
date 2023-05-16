@@ -133,3 +133,11 @@ svg
 {
   font-size: 4em;
 }
+
+#card-body
+{
+  background-color: var(--fundo-tabela);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
