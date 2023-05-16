@@ -1,7 +1,21 @@
-const express = require('express');
-const users = require('../controllers/users')
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 
-router.get('/', users.home)
+const UserController = require('../controllers/users')
+
+router.get('/add', UserController.newUser)
+router.post('/add', UserController.newUserSave)
+
+router.get('/edit/:id', UserController.updateUser)
+router.post('/edit', UserController.updateUserSave)
+
+router.post('/remove', UserController.removeUser)
+
+// router.get('/allUsers', UserController.allUsers)
+router.get('/', UserController.allUsers)
+
+router.use(function(req, res){
+  res.status(404).render('404')
+})
 
 module.exports = router
