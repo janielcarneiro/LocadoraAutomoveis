@@ -23,6 +23,12 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.static('resources'));
 
+
+app.get("/404", (req, res, next) => {
+    res.render("404");
+})
+
+
 app.get("/entrar", (req, res, next) => {
     res.render("login");
 })

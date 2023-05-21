@@ -1,0 +1,74 @@
+{{> navbar}}
+{{> icons}}
+
+
+{{> navbar}}
+{{> icons}}
+
+<div class="page">
+<div class="container">
+        <div class="mt-5 mb-4">
+          <h1>Configurações</h2>
+          <hr>
+        </div>
+
+    <div class="card">
+
+              <div id="card" class="card-header">
+                  <svg class="m-1" width="20" height="20"><use xlink:href="#user"/></svg>
+                  Novo Usuário
+              </div>
+    
+        <div id="card-body" class="card-body">
+
+            <form  action="">
+                
+                <div class="container d-flex m-2">
+                    <label for="nome">
+                        <svg class="m-1" width="20" height="20"><use xlink:href="#signature"/></svg>
+                    </label>
+                    <input type="text" id="nome" class="form-control" placeholder="Nome">
+                </div>
+
+
+                <div class="container d-flex m-2">
+                    <label for="cpf">
+                        <svg class="m-1" width="20" height="20"><use xlink:href="#cpf-icon"/></svg>
+                    </label>
+                    <input type="text" id="cpf" class="form-control" maxlength="11" placeholder="CPF">
+                </div>
+
+                <div class="container d-flex align-content-center m-2">
+                    <label for="login">
+                        <svg class="be m-1" width="20" height="20"><use xlink:href="#login"/></svg>
+                    </label>
+                    <input type="text" id="login" class="form-control" placeholder="Usuário">
+                </div>
+
+                
+                <div class="container d-flex m-2">
+                    <label for="senha_1">
+                        <svg class="m-1" width="20" height="20"><use xlink:href="#lock"/></svg>
+                    </label>
+                    <input type="password" id="senha_1" class="form-control" placeholder="Senha">
+                </div>
+                
+                <div class="container d-flex m-2">
+                    <label for="senha_2">
+                        <svg class="m-1" width="20" height="20"><use xlink:href="#lock"/></svg>
+                    </label>
+                    <input type="password" id="senha_2" class="form-control" placeholder="Repita a Senha">
+                </div>                   
+            </form>
+                
+        </div>
+            
+    </div>
+
+    <div class="d-flex mx-1">
+        <button type="button" class="btn btn-outline-info btn-block mt-3 mx-1" > Cancelar</button>
+        <button type="button" class="btn btn-info btn-block mt-3 mx-1" > Cadastrar novo usuário</button>
+    </div>
+
+</div>
+</div>
