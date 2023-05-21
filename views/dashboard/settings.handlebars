@@ -1,0 +1,37 @@
+{{> navbar}}
+{{> icons}}
+
+<div class="page">
+    <div class="container">
+        <div class="mt-5 mb-4">
+            <h1>Configurações</h2>
+            <hr>
+        </div>
+
+        <div class="card">
+            <div id="card" class="card-header">
+                <svg class="m-1" width="20" height="20"><use xlink:href="#user"/></svg>
+                Usuários
+            </div>
+            <div class="card-body">     
+                <table class="table table-sm">
+                    <thead>
+                        <tr class="table-info">
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Login</th>
+                        <th scope="col">Editar/Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{> tabela_usuarios}}
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+        <a href="/usuarios/add" class="btn btn-info btn-block mt-5" > Cadastrar novo Usuário</a>
+    </div>
+    
+</div>

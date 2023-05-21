@@ -48,6 +48,18 @@ app.get("/alocacoes/add", (req, res, next) => {
 })
 
 
+app.get("/configuracoes", (req, res, next) => {
+    res.render("dashboard/settings");
+})
+
+app.get("/usuarios/add", (req, res, next) => {
+    res.render("dashboard/user/a_user");
+})
+
+
+
+
+
 app.use(users)
 
 // sincroniza o modelo com o banco de dados e inicia o servidor

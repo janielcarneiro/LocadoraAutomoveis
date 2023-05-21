@@ -141,3 +141,8 @@ svg
   align-items: center;
   justify-content: center;
 }
+
+tbody tr:nth-child(odd)
+{
+  background-color: var(--fundo-tabela);
+}
