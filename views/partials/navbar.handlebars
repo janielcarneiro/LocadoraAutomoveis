@@ -1,3 +1,4 @@
+
 <div class="navbarPartials">
 
   {{> icons}}
@@ -11,37 +12,38 @@
     </div>
     
     <div id="nav-body" class="my-5">
-        <ul class="my-5 nav nav-pills flex-column justify-content-center">
-        <li class="nav-item">
-          <a href="/dashboard" class="nav-link active" aria-current="page">
-            <svg class="m-2" width="25" height="25"><use xlink:href="#home"/></svg>
-            Inicio
-          </a>
-        </li>
-        <li>
-          <a href="/veiculos" class="nav-link text-dark">
-            <svg class="bi pe-none m-2" width="25" height="25"><use xlink:href="#car"/></svg>  
-            Veículos
-          </a>
-        </li>
-        <li>
-          <a href="/alocacoes" class="nav-link text-dark">
-            <svg class="bi pe-none m-2" width="25" height="25"><use xlink:href="#road"/></svg>
-            Alocações
-          </a>
-        </li>
-        <li>
-          <a href="/clientes" class="nav-link text-dark">
-            <svg class="bi pe-none m-2" width="25" height="25"><use xlink:href="#clients"/></svg>
-            Clientes
-          </a>
-        </li>
-        <li>
-          <a href="/configuracoes" class="nav-link text-dark">
-            <svg class="bi pe-none m-2" width="25" height="25"><use xlink:href="#settings"/></svg>
-            Configurações
-          </a>
-        </li>
+        <ul id="nav-bar" class="my-5 nav nav-pills flex-column justify-content-center">
+
+          <li id="home" class="nav-item" onclick="change()" >
+            <a href="/dashboard" class="nav-link active" aria-current="page">
+              <svg class="m-2" width="25" height="25"><use xlink:href="#home"/></svg>
+              Inicio
+            </a>
+          </li>
+          <li id="veiculos" onclick="change()">
+            <a href="/veiculos" class="nav-link text-dark" onclick="change()">
+              <svg class="bi pe-none m-2" width="25" height="25"><use xlink:href="#car"/ onclick="change()"></svg>  
+              Veículos
+            </a>
+          </li>
+          <li id="alocaoces">
+            <a href="/alocacoes" class="nav-link text-dark">
+              <svg class="bi pe-none m-2" width="25" height="25"><use xlink:href="#road"/></svg>
+              Alocações
+            </a>
+          </li>
+          <li id="clientes">
+            <a href="/clientes" class="nav-link text-dark">
+              <svg class="bi pe-none m-2" width="25" height="25"><use xlink:href="#clients"/></svg>
+              Clientes
+            </a>
+          </li>
+          <li id="configuracoes">
+            <a href="/configuracoes" class="nav-link text-dark">
+              <svg class="bi pe-none m-2" width="25" height="25"><use xlink:href="#settings"/></svg>
+              Configurações
+            </a>
+          </li>
       </ul>
     </div>
       
@@ -55,4 +57,5 @@
       </main>
 
 </div>
+
 
