@@ -53,6 +53,10 @@ app.get("/alocacoes/add", (req, res, next) => {
     res.render("dashboard/allocation/a_allocation");
 })
 
+app.get("/vehicle/add", (req, res, next) => {
+    res.render("dashboard/vehicle/a_vehicle");
+})
+
 
 app.get("/configuracoes", (req, res, next) => {
     res.render("dashboard/settings");
