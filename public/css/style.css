@@ -114,13 +114,9 @@ p
 svg
 {
   fill: var(--texto-icones);
+  width: 25px;
 }
 
-
-#home
-{
-  fill: white;
-}
 
 
 #navbar
@@ -149,4 +145,21 @@ svg
 tbody tr:nth-child(odd)
 {
   background-color: var(--fundo-tabela);
+}
+
+#edit, #exclude
+{
+  width: 15px;
+  height: 15px;
+}
+
+
+#edit_btn
+{
+  background-color: var(--links);
+}
+
+#exclude_btn
+{
+  background-color: var(--vermelho);
 }
