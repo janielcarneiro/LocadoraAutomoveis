@@ -55,4 +55,8 @@ module.exports = class veiculos {
             }
     }
 
+    static async allUsers(req, res) {
+      const veiculos = await Veiculos.findAll({ raw: true })
+    }
+  
 }

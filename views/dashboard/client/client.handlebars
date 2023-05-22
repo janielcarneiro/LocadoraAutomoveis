@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="title">
+    <h1>Clientes Cadastrados</h1>
+    <div> 
+      <a href="/" class="btn"><i class="bi bi-house"></i>  Home</a>
+      <a href="/clients/add" class="btn">
+        <i class="bi bi-plus-square"></i> Cadastrar novo cliente
+      </a>
+    </div>
+  </div>
+
+  <div class="container text-center info-title">
+    <div class="row">
+      <div class="col">
+        Nome
+      </div>
+      <div class="col">
+        CPF
+      </div>
+      <div class="col">
+        Telefone
+      </div>
+      <div class="col">
+        Endereço
+      </div>
+      <div class="col">
+        Editar
+      </div>
+      <div class="col">
+        Excluir
+      </div>
+    </div>
+  </div>
+
+  <ul class="usuarios">
+    {{#each users}}
+      <li>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <label for="">{{this.nome}}</label>
+            </div>
+            <div class="col">
+              <label for="">{{this.cpf}}</label>
+            </div>
+            <div class="col">
+              <label for="">{{this.telefone}}</label>
+            </div>
+            <div class="col">
+              <label for="">{{this.endereco}}</label>
+            </div>
+            <div class="col">
+              <a href="/clients/edit/{{this.id}}">
+                <i class="bi bi-pencil"></i>
+              </a>
+            </div>
+            <div class="col">
+              <form action="/clients/remove" method="post">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button type="submit">
+                  <i class="bi bi-trash3"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+
+</div>
