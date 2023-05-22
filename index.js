@@ -1,5 +1,6 @@
 const express = require("express");
 const exphbs = require('express-handlebars');
+const session = require('express-session');
 
 const hbs = exphbs.create({partialsDir: ["views/partials"]});
 const users = require('./routes/users');
@@ -14,6 +15,19 @@ app.engine('handlebars', exphbs.engine({defaultLayout: 'principal'}));
 
 app.set('view engine', 'handlebars');
 app.set('views', './views');
+
+app.use(
+    express.urlencoded({extended: true})
+)
+app.use(express.json());
+
+app.use(session({
+  name: "session",
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: true
+}));
+
 
 
 app.use(express.urlencoded({ extended: true }));
