@@ -67,9 +67,8 @@ app.get("/usuarios/add", (req, res, next) => {
 })
 
 app.get("/clientes/add", (req, res, next) => {
-    res.render("dashboard/clientes/a_clientes");
+    res.render("dashboard/client/a_client");
 })
-
 
 
 app.use(users)
