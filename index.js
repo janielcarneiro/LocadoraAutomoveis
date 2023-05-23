@@ -4,6 +4,7 @@ const session = require('express-session');
 
 const hbs = exphbs.create({partialsDir: ["views/partials"]});
 const users = require('./routes/users');
+const vehicles = require('./routes/vehicles')
 const conn = require("./db/conn");
 
 const app = express();
@@ -36,7 +37,8 @@ app.use(express.json());
 app.use(express.static('resources'));
 
 
-app.use(users)
+app.use(users);
+app.use('/vehicles', vehicles);
 
 // sincroniza o modelo com o banco de dados e inicia o servidor
 
