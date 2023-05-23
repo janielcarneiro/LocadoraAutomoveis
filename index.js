@@ -66,8 +66,9 @@ app.get("/usuarios/add", (req, res, next) => {
     res.render("dashboard/user/a_user");
 })
 
-
-
+app.get("/clientes/add", (req, res, next) => {
+    res.render("dashboard/client/a_client");
+})
 
 
 app.use(users)
