@@ -1,0 +1,36 @@
+{{> navbar}}
+{{> icons}}
+
+<div class="page">
+    <div class="container">
+        <div class="mt-5 mb-4">
+            <h1>Veículos</h2>
+            <hr>
+        </div>
+
+        <div class="card">
+            <div id="card" class="card-header">
+                <svg class="m-1" width="20" height="20"><use xlink:href="#road"/></svg>
+                Veículos Cadastrados
+            </div>
+            <div class="card-body">     
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Veículo</th>
+                        <th scope="col">Placa</th>
+                        <th scope="col">Cor</th>
+                        <th scope="col">Custo Diário</th>
+                        <th scope="col">Editar/Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                        {{> tabela_alocacoes}}
+                </table>
+            </div>
+        </div>
+        <a href="/vehicle/add" class="btn btn-info btn-block mt-5" > Cadastrar novo veículo</a>
+    </div>
+    
+</div>

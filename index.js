@@ -16,6 +16,8 @@ app.engine('handlebars', exphbs.engine({defaultLayout: 'principal'}));
 
 app.set('view engine', 'handlebars');
 app.set('views', './views');
+app.set('dashboard', './views/dashboard');
+app.set('resources', './resources');
 
 app.use(
     express.urlencoded({extended: true})
@@ -36,9 +38,6 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.static('resources'));
 
-
-app.use(users);
-app.use('/vehicles', vehicles);
 
 // sincroniza o modelo com o banco de dados e inicia o servidor
 
