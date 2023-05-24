@@ -3,7 +3,7 @@
     <tr>
         <td>{{this.nome}}</td>
         <td>{{this.cpf}}</td>
-        <td>{{this.login}}</td>
+        <td>{{this.email}}</td>
         <td style="display: flex;">
             <a id="edit_btn" class="btn" href="/users/edit/{{this.id}}" >{{> edit}}</a>
             <form action="/users/remove" method="post">
@@ -18,27 +18,5 @@
             <a id="exclude_btn" class="btn" href="#" >{{> exclude}}</a>
         </td> --}}
     </tr>
-
-    {{!-- <tr>
-        <td>Usuário</td>
-        <td>Info 02</td>
-        <td>Info 03</td>
-        <td>Info 04</td>
-        <td >
-            <a id="edit_btn" class="btn" href="#" >{{> edit}}</a>
-            <a id="exclude_btn" class="btn" href="#" >{{> exclude}}</a>
-        </td>
-    </tr> 
-
-    <tr>
-        <td>Usuário</td>
-        <td>Info 02</td>
-        <td>Info 03</td>
-        <td>Info 04</td>
-        <td >
-            <a id="edit_btn" class="btn" href="#" >{{> edit}}</a>
-            <a id="exclude_btn" class="btn" href="#" >{{> exclude}}</a>
-        </td>
-    </tr>  --}}
 {{/each}}
 </div>

@@ -48,7 +48,7 @@ module.exports = class users {
       const usuario = {
         nome: req.body.nome,
         cpf: req.body.cpf,
-        login: req.body.login,
+        email: req.body.email,
         senha: req.body.senha,
       }
       await User.create(usuario)
@@ -72,7 +72,7 @@ module.exports = class users {
       const user = {
         nome: req.body.nome,
         cpf: req.body.cpf,
-        login: req.body.login,
+        email: req.body.email,
         senha: req.body.senha,
       }
       await User.update(user, { where: {id: id} })
