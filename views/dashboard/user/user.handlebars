@@ -1,65 +1,35 @@
-<div class="container">
-  <div class="title">
-    <h1>Usuários Cadastrados</h1>
-    <div> 
-      <a href="/" class="btn"><i class="bi bi-house"></i>  Home</a>
-      <a href="/users/add" class="btn">
-        <i class="bi bi-plus-square"></i> Cadastrar novo usuário
-      </a>
-    </div>
-  </div>
+{{> navbar}}
+{{> icons}}
 
-  <div class="container text-center info-title">
-    <div class="row">
-      <div class="col">
-        Nome
-      </div>
-      <div class="col">
-        CPF
-      </div>
-      <div class="col">
-        Login
-      </div>
-      <div class="col">
-        Editar
-      </div>
-      <div class="col">
-        Excluir
-      </div>
-    </div>
-  </div>
-
-  <ul class="usuarios">
-    {{#each users}}
-      <li>
-        <div class="container text-center">
-          <div class="row">
-            <div class="col">
-              <label for="">{{this.nome}}</label>
-            </div>
-            <div class="col">
-              <label for="">{{this.cpf}}</label>
-            </div>
-            <div class="col">
-              <label for="">{{this.login}}</label>
-            </div>
-            <div class="col">
-              <a href="/users/edit/{{this.id}}">
-                <i class="bi bi-pencil"></i>
-              </a>
-            </div>
-            <div class="col">
-              <form action="/users/remove" method="post">
-                <input type="hidden" name="id" value="{{this.id}}">
-                <button type="submit">
-                  <i class="bi bi-trash3"></i>
-                </button>
-              </form>
-            </div>
-          </div>
+<div class="page">
+    <div class="container">
+        <div class="mt-5 mb-4">
+            <h1>Usuários</h2>
+            <hr>
         </div>
-      </li>
-    {{/each}}
-  </ul>
 
+        <div class="card">
+            <div id="card" class="card-header">
+                <svg class="m-1" width="20" height="20"><use xlink:href="#road"/></svg>
+                Usuários Cadastrados
+            </div>
+            <div class="card-body">    
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">CPF</th>
+                        <th scope="col">Login</th>
+                        <th scope="col">Editar/Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                        {{> tabela_usuarios}}
+                </table>
+            </div>
+        </div>
+        <a href="/users/add" class="btn btn-info btn-block mt-5" > Cadastrar novo usuário</a>
+    </div>
+    
 </div>
