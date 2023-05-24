@@ -6,6 +6,11 @@ module.exports = class users {
     static login(req, res, next) {
       res.render('login');
     }
+
+    static dashboard(req, res){
+      
+      res.render("dashboard/dashboard")
+    }
   
     static async login_post(req, res, next) {
       const { email, senha } = req.body;
@@ -19,7 +24,7 @@ module.exports = class users {
       } else {
         console.log("Usuário encontrado");
         req.session.user = user; // Salvar o usuário na sessão
-        res.redirect('/'); // Redirecionar para a página home em caso de sucesso de autenticação
+        res.redirect('/dashboard'); // Redirecionar para a página home em caso de sucesso de autenticação
       }
     }
   

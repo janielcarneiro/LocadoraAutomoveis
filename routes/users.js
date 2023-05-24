@@ -7,6 +7,8 @@ const router = express.Router();
 
 router.get('/login',B_login, users.login)
 router.post('/loginpost', users.login_post)
-router.get('/', V_session, users.home)
+
+router.get('/dashboard',V_session, users.dashboard)
+router.get('/', users.home)
 
 module.exports = router

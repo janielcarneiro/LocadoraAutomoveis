@@ -17,7 +17,7 @@
     
               <div id="card-body" class="card-body">
 
-                <form  action="">
+                <form action="/dashboard/vehicles/edit/{{veiculos.id}}" method="post">
                     
                     
                     <div class="container d-flex align-content-center m-2">
@@ -25,9 +25,10 @@
                             <svg class="be m-1" width="20" height="20"><use xlink:href="#car-side"/></svg>
                         </label>
                         
-                        <select id="cars" name="cars" class="form-control">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
+                        <select name="modelo" id="cars" name="cars" class="form-control">
+                            <option value="{{veiculos.modelo}}" >{{veiculos.modelo}}</option>
+                            <option  value="volvo">Volvo</option>
+                            <option  value="saab">Saab</option>
                             <option value="fiat">Fiat</option>
                             <option value="audi">Audi</option>
                         </select>
@@ -38,7 +39,7 @@
                             <svg class="m-1" width="20" height="20"><use xlink:href="#car-plate"/></svg>
                         </label>
     
-                        <input type="text" id="placa" class="form-control" placeholder="Placa">
+                        <input name="placa" value="{{veiculos.placa}}" type="text" id="placa" class="form-control" placeholder="Placa">
                     </div>
 
 
@@ -47,7 +48,7 @@
                             <svg class="m-1" width="20" height="20"><use xlink:href="#color"/></svg>
                         </label>
     
-                        <input type="text" id="cor" class="form-control" placeholder="Cor">
+                        <input name="cor" value="{{veiculos.cor}}" type="text" id="cor" class="form-control" placeholder="Cor">
                     </div>
 
                     <div class="container d-flex m-2">
@@ -55,19 +56,18 @@
                             <svg class="m-1" width="20" height="20"><use xlink:href="#money"/></svg>
                         </label>
     
-                        <input type="text" id="money" class="form-control" placeholder="Custo diário">
+                        <input name="custo" value="{{veiculos.custo}}" type="text" id="money" class="form-control" placeholder="Custo diário">
                     </div>
 
+                    <div class="d-flex mx-1">
+                        <button type="submit" class="btn btn-outline-info btn-block mt-3 mx-1" > Cancelar</button>
+                        <button type="submit" class="btn btn-info btn-block mt-3 mx-1" > Salvar Alterações</button>
+                    </div>
                     
                 </form>
                 
               </div>
             
-    </div>
-
-    <div class="d-flex mx-1">
-        <button type="button" class="btn btn-outline-info btn-block mt-3 mx-1" > Cancelar</button>
-        <button type="button" class="btn btn-info btn-block mt-3 mx-1" > Salvar Alterações</button>
     </div>
 
 </div>

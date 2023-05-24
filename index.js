@@ -38,9 +38,20 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.static('resources'));
 
+app.use(users);
+
+app.use('/dashboard/vehicles', vehicles);
+
 
 // sincroniza o modelo com o banco de dados e inicia o servidor
 
+conn.sync()
+.then(() => {
     app.listen(PORT, () => {
         console.log(`Servidor ligado na porta ${PORT}`);
     });
+  console.log('Server Started')
+})
+.catch((err) => {
+  console.log(err)
+})
