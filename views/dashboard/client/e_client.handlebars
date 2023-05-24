@@ -16,10 +16,11 @@
     
               <div id="card-body" class="card-body">
 
-                <form  action="/clients/edit" method="post">
+                <form  action="/clients/edit/" method="post">
                     
                     
                    <div class="container d-flex m-2">
+                    <input type="hidden" name="id" value="{{user.id}}">
                         <label for="nome">
                             <svg class="m-1" width="20" height="20"><use xlink:href="#client"/></svg>
                         </label>
