@@ -1,28 +1,21 @@
 {{> icons}}
 <div class="tabela_veiculosPartials"> 
 
+    {{#each veiculos}}
     <tr>
-        <td>Veiculo 01</td>
-        <td>Info 02</td>
-        <td>Info 03</td>
-        <td>Info 04</td>
-        <td >
-            <a id="edit_btn" class="btn" href="#" >{{> edit}}</a>
-            <a id="exclude_btn" class="btn" href="#" >{{> exclude}}</a>
-        </td>
-        
-    </tr>
+        <td>{{this.modelo}}</td>
+        <td>{{this.placa}}</td>
+        <td>{{this.cor}}</td>
+        <td>R${{this.custo}}</td>
+        <td style="display: flex;">
+            <a id="edit_btn" class="btn" href="/dashboard/vehicles/edit/{{this.id}}" >{{> edit}}</a>
 
-    <tr>
-        <td>Veiculo 02</td>
-        <td>Info 02</td>
-        <td>Info 03</td>
-        <td>Info 04</td>
-        <td >
-            <a id="edit_btn" class="btn" href="#" >{{> edit}}</a>
-            <a id="exclude_btn" class="btn" href="#" >{{> exclude}}</a>
-        </td>
+            <form action="/dashboard/vehicles/delete/{{this.id}}" method="post">
+                <button type="submit" id="exclude_btn" class="btn" href="#" >{{> exclude}}</a>
+            </form>
 
+        </td>
     </tr>
+    {{/each}}
 
 </div>
