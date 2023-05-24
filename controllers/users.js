@@ -27,6 +27,11 @@ module.exports = class users {
         res.redirect('/dashboard'); // Redirecionar para a página home em caso de sucesso de autenticação
       }
     }
+
+    static logout(req, res) {
+      req.session.destroy()
+      res.redirect('/')
+    }
   
     static async home(req, res, next) {  
         const user = req.session.user;
