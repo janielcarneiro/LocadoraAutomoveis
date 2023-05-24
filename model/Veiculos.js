@@ -9,7 +9,7 @@ const Veiculos = db.define('Veiculos', {
     },
 
     placa: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         required: true
     },
 

@@ -14,12 +14,12 @@ const User = db.define('Users', {
     },
 
     senha: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         required: true
     },
 
     cpf: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         required: true
     }
     

@@ -4,6 +4,7 @@ const session = require('express-session');
 
 const hbs = exphbs.create({partialsDir: ["views/partials"]});
 const users = require('./routes/users');
+const client = require('./routes/clientes')
 const vehicles = require('./routes/vehicles')
 const conn = require("./db/conn");
 
@@ -39,7 +40,7 @@ app.use(express.json());
 app.use(express.static('resources'));
 
 app.use(users);
-
+app.use('/clients', client)
 app.use('/dashboard/vehicles', vehicles);
 
 

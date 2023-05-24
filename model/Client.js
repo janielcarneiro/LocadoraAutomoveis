@@ -11,14 +11,14 @@ const Client = db.define('Client', {
         type: DataTypes.INTEGER,
         required: true
     },
-    endereco: {
-        type: DataTypes.STRING,
-        required: true
-    },
     telefone: {
         type: DataTypes.INTEGER,
         required: true
-    }
+    },
+    endereco: {
+        type: DataTypes.STRING,
+        required: true
+    }, 
 });
 
 module.exports = Client;

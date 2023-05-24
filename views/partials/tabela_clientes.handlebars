@@ -1,10 +1,18 @@
 <div class="tabela_clientesPartials"> 
-
+{{#each users}} 
     <tr>
-        <td>Info 01</td>
-        <td>Info 02</td>
-        <td>Info 03</td>
-        <td>Info 04</td>
+        <td>{{this.nome}}</td>
+        <td>{{this.telefone}}</td>
+        <td>{{this.endereco}}</td>
+        <td style="display: flex;">
+            <a id="edit_btn" class="btn" href="/clients/edit/{{this.id}}" >{{> edit}}</a>
+            <form action="/clients/remove" method="post">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button type="submit" id="exclude_btn" class="btn"  >
+                  {{> exclude}}
+                </button>
+            </form>
+        </td>
     </tr>
-
+{{/each}}
 </div>

@@ -16,7 +16,7 @@
     
               <div id="card-body" class="card-body">
 
-                <form  action="">
+                <form  action="/clients/add" method="post">
                     
                     
                    <div class="container d-flex m-2">
@@ -24,7 +24,7 @@
                             <svg class="m-1" width="20" height="20"><use xlink:href="#client"/></svg>
                         </label>
     
-                        <input type="text" id="nome" class="form-control" placeholder="Nome">
+                        <input type="text" id="nome" class="form-control" placeholder="Nome" name="nome">
                     </div>
 
                     <div class="container d-flex m-2">
@@ -32,7 +32,7 @@
                             <svg class="m-1" width="20" height="20"><use xlink:href="#cpf-icon"/></svg>
                         </label>
     
-                        <input type="text" id="cpf" class="form-control" placeholder="CPF">
+                        <input type="text" id="cpf" class="form-control" placeholder="CPF" name="cpf">
                     </div>
 
 
@@ -41,7 +41,7 @@
                             <svg class="m-1" width="20" height="20"><use xlink:href="#phone"/></svg>
                         </label>
     
-                        <input type="text" id="telefone" class="form-control" placeholder="Telefone">
+                        <input type="text" id="telefone" class="form-control" placeholder="Telefone" name="telefone">
                     </div>
 
                     <div class="container d-flex m-2">
@@ -49,19 +49,18 @@
                             <svg class="m-1" width="20" height="20"><use xlink:href="#map"/></svg>
                         </label>
     
-                        <input type="text" id="map" class="form-control" placeholder="Endereço">
+                        <input type="text" id="endereco" class="form-control" placeholder="Endereço" name="endereco">
                     </div>
 
-                    
+                    <div class="d-flex mx-1">
+                        <button type="button" class="btn btn-outline-info btn-block mt-3 mx-1" > Cancelar</button>
+                        <button type="submit" class="btn btn-info btn-block mt-3 mx-1" > Cadastrar novo cliente</button>
+                    </div>
+
                 </form>
                 
               </div>
             
-    </div>
-
-    <div class="d-flex mx-1">
-        <button type="button" class="btn btn-outline-info btn-block mt-3 mx-1" > Cancelar</button>
-        <button type="button" class="btn btn-info btn-block mt-3 mx-1" > Cadastrar novo cliente</button>
     </div>
 
 </div>
