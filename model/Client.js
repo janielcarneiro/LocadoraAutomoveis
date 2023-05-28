@@ -8,11 +8,11 @@ const Client = db.define('Client', {
         required: true
     },
     cpf: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         required: true
     },
     telefone: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         required: true
     },
     endereco: {

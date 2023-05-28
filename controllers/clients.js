@@ -3,7 +3,12 @@ const Client = require('../model/Client')
 module.exports = class ClientController {
 
   static newUser(req, res) {
-    res.render('dashboard/client/a_client')
+    if(!req.session.user){
+      res.redirect('/login')
+    }else{
+      res.render('dashboard/client/a_client')
+    }
+    
   }
 
   static async newUserSave(req, res) {
@@ -24,14 +29,22 @@ module.exports = class ClientController {
   // }
 
   static async allUsers(req, res) {
-    const users = await Client.findAll({ raw: true })
-    res.render('dashboard/client/client', { users })
+    if(!req.session.user){
+      res.redirect('/login')
+    }else{
+      const users = await Client.findAll({ raw: true })
+      res.render('dashboard/client/client', { users })
+    }
   }
 
   static async updateUser(req, res) {
-    const id = req.params.id
-    const user = await Client.findOne({ where:{id:id}, raw:true })
-    res.render('dashboard/client/e_client', { user })
+    if(!req.session.user){
+      res.redirect('/login');
+    }else{
+      const id = req.params.id
+      const user = await Client.findOne({ where:{id:id}, raw:true })
+      res.render('dashboard/client/e_client', { user })
+    }
   }
 
   static async updateUserSave(req, res) {

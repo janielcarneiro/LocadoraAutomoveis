@@ -5,19 +5,31 @@ const Veiculos = require('../model/Veiculos')
 module.exports = class vehicles {
 
     static async render_list(req, res){
-      const veiculos = await Veiculos.findAll({ raw: true });
-      res.render('dashboard/vehicle/vehicle', {veiculos});
+      if(!req.session.user){
+        res.redirect('/login')
+      }else{
+        const veiculos = await Veiculos.findAll({ raw: true });
+        res.render('dashboard/vehicle/vehicle', {veiculos})
+      }
     }
 
     static async render_veicles_add(req, res){
-      res.render('dashboard/vehicle/a_vehicle')
+      if(!req.session.user){
+        res.redirect('/login')
+      }else{
+        res.render('dashboard/vehicle/a_vehicle')
+      }
     }
 
     static async render_veicles_edit(req, res){
-      const id = req.params.id;
-      console.log("Id: ", id)
-      const veiculos = await Veiculos.findByPk(id, {raw: true });
-      res.render('dashboard/vehicle/e_vehicle', {veiculos});
+      if(!req.session.user){
+        res.redirect('/login')
+      }else{
+        const id = req.params.id;
+        console.log("Id: ", id)
+        const veiculos = await Veiculos.findByPk(id, {raw: true });
+        res.render('dashboard/vehicle/e_vehicle', {veiculos});
+      }
     }
 
     static async register(req, res){  

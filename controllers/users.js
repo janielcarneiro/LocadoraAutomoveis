@@ -8,8 +8,12 @@ module.exports = class users {
     }
 
     static dashboard(req, res){
-      
-      res.render("dashboard/dashboard")
+      if(!req.session.user){
+        res.redirect('/login');
+      }else{
+        res.render("dashboard/dashboard")
+      }
+
     }
   
     static async login_post(req, res, next) {
@@ -40,7 +44,13 @@ module.exports = class users {
     }
 
     static newUser(req, res) {
-      res.render('dashboard/user/a_user')
+
+      if(!req.session.user){
+        res.redirect('/login');
+      }else{
+        res.render('dashboard/user/a_user');
+      }
+    
     }
   
     static async newUserSave(req, res) {
@@ -57,14 +67,23 @@ module.exports = class users {
     }
   
     static async allUsers(req, res) {
-      const users = await User.findAll({ raw: true })
-      res.render('dashboard/user/user', { users })
+      if(!req.session.user){
+        res.redirect('/login');
+      }else{
+        const users = await User.findAll({ raw: true })
+        res.render('dashboard/user/user', { users })
+      }
     }
   
     static async updateUser(req, res) {
-      const id = req.params.id
-      const user = await User.findOne({ where:{id:id}, raw:true })
-      res.render('dashboard/user/e_user', { user })
+
+      if(!req.session.user){
+        res.redirect('/login');
+      }else{
+        const id = req.params.id
+        const user = await User.findOne({ where:{id:id}, raw:true })
+        res.render('dashboard/user/e_user', { user })
+      }
     }
   
     static async updateUserSave(req, res) {

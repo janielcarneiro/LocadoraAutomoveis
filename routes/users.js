@@ -6,7 +6,7 @@ const router = express.Router();
 
 
 router.get('/login',B_login, users.login)
-router.post('/loginpost', users.login_post)
+router.post('/loginpost',B_login ,users.login_post)
 router.post('/logout', users.logout)
 
 router.get('/dashboard', users.dashboard)
