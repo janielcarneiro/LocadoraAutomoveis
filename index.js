@@ -41,7 +41,7 @@ app.use(express.static('resources'));
 
 app.use(users);
 app.use('/clients', client)
-app.use('/dashboard/vehicles', vehicles);
+app.use('/vehicles', vehicles);
 
 
 // sincroniza o modelo com o banco de dados e inicia o servidor
