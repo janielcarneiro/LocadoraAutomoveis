@@ -44,7 +44,7 @@ module.exports = class vehicles {
         })
         .then(() => {
             console.log("CADASTRO DE VEICULOS FEITO COM SUCESSO")
-            res.redirect("/dashboard/vehicles")
+            res.redirect("/vehicles")
         })
         .catch((error) => {
             console.log("ERROR: ", error);
@@ -69,7 +69,7 @@ module.exports = class vehicles {
               }
 
               await Veiculos.update(user, { where: { id: id } }).then(()=> {
-               res.redirect('/dashboard/vehicles')
+               res.redirect('/vehicles')
               }).catch(error => {
                 console.log("error ao atualizar: ", error);
               })
@@ -84,7 +84,7 @@ module.exports = class vehicles {
             try {
               const id = req.params.id;
               await Veiculos.destroy({where: {id: id}}).then(()=> {
-                res.redirect('/dashboard/vehicles');
+                res.redirect('/vehicles');
               })
             } catch (error) {
                 console.log("Error ao deletar: ", error);

@@ -8,9 +8,9 @@
         <td>{{this.cor}}</td>
         <td>R${{this.custo}}</td>
         <td style="display: flex;">
-            <a id="edit_btn" class="btn" href="/dashboard/vehicles/edit/{{this.id}}" >{{> edit}}</a>
+            <a id="edit_btn" class="btn" href="/vehicles/edit/{{this.id}}" >{{> edit}}</a>
 
-            <form action="/dashboard/vehicles/delete/{{this.id}}" method="post">
+            <form action="/vehicles/delete/{{this.id}}" method="post">
                 <button type="submit" id="exclude_btn" class="btn" href="#" >{{> exclude}}</a>
             </form>
 
