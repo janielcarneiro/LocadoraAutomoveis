@@ -40,12 +40,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.static('resources'));
-
 app.use(users);
 app.use('/clients', client)
 app.use('/vehicles', vehicles);
 app.use('/alocacoes', alocacao)
-
 
 // sincroniza o modelo com o banco de dados e inicia o servidor
 
