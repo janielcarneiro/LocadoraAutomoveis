@@ -5,7 +5,7 @@ const router = express.Router();
 //router.get('/', users.home)
 router.get('/', vehicles.render_list)
 router.get('/add', vehicles.render_veicles_add)
-router.get('/edit/:id', vehicles.render_veicles_edit)
+router.get('/edit/:id', vehicles.render_veicles_edit);
 
 
 router.post('/add/register', vehicles.register)

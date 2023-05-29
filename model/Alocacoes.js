@@ -1,59 +1,42 @@
-/*const { DataTypes } = require('sequelize');
+const { DataTypes } = require('sequelize');
 const sequelize = require('../database/connection');
 
-const Cliente = require('./clienteModel');
-const Veiculo = require('./veiculoModel');
+const Cliente = require('./Client');
+const Veiculo = require('./Veiculos');
+const Users = require('./User');
 
 const Locacao = sequelize.define('Locacao', {
-  idLocacao: {
+  id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true
   },
-  nome: {
+  idVeiculo: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  cpf: {
+  idCliente: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  placa: {
+  idUsuario: {
     type:DataTypes.STRING,
     allowNull: false
   },
-  marca: {
+  dataInicio: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  modelo: {
+  dataFinal: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  cor: {
+  custo: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  renavam: {
+  data: {
     type:DataTypes.STRING,
-    allowNull: false
-  },
-  dataInicio:{
-    type: DataTypes.DATE,
-  },
-  dataFim:{
-    type: DataTypes.DATE,
-  },
-  valorDiaria: {
-    type: DataTypes.FLOAT, // ou outro tipo adequado, dependendo do formato do valor
-    allowNull: false
-  },
-  quantidadeDiarias: {
-    type: DataTypes.INTEGER,
-    allowNull: false
-  },
-  valorTotal: {
-    type: DataTypes.FLOAT, // ou outro tipo adequado, dependendo do formato do valor
     allowNull: false
   }
 });
@@ -61,10 +44,11 @@ const Locacao = sequelize.define('Locacao', {
 
 
 //RELACIONAMENTOS
-Locacao.belongsTo(Cliente, { foreignKey: 'idCliente' }); // uma locação é feita por um cliente
-Cliente.hasMany(Locacao, { foreignKey: 'idCliente' }); // um cliente pode fazer várias locações
+Locacao.belongsTo(Cliente, { foreignKey: 'id' }); // uma locação é feita por um cliente
 
-Locacao.belongsTo(Veiculo, { foreignKey: 'idVeiculo' }); // uma locação é feita para um veículo
-Veiculo.hasMany(Locacao, { foreignKey: 'idVeiculo' }); // um veículo pode ser alugado várias vezes
+Locacao.belongsTo(Veiculo, { foreignKey: 'id' }); // uma locação é feita para um veículo
+Veiculo.hasMany(Locacao, { foreignKey: 'id' }); // um veículo pode ser alugado várias vezes
 
-module.exports = Locacao;*/
+
+Users.hasMany(Locacao, { foreignKey: 'id' }); //um usuario pode alugar varias vezes
+module.exports = Locacao

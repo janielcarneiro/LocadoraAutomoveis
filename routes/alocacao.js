@@ -1,7 +1,8 @@
 const express = require('express');
-//const users = require('../controllers/users')
+const alocacao = require('../controllers/Alocacao')
 const router = express.Router();
 
-//router.get('/', users.home)
+router.get('/', alocacao.render);
+router.get('/add', alocacao.render_add);
 
 module.exports = router
